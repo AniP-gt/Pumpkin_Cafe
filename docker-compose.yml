@@ -1,0 +1,41 @@
+version: "3"
+
+services:
+  db:
+    image: mysql:5.7
+    platform: linux/x86_64
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: wordpress
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+
+  wordpress:
+    depends_on:
+      - db
+    build:
+      context: .
+      args:
+        FTP_USER_NAME: ftpuser
+        FTP_USER_PASS: ftppassword
+        SSH_USER_NAME: sshuser
+        SSH_USER_PASS: sshpassword
+    ports:
+      - "8000:80"
+      - "21:21"
+      - "22:22"
+      - "30000-31000:30000-31000"
+    restart: always
+    privileged: true
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+    volumes:
+      - .:/var/www/html/wp-content/themes/pumpkin_cafe
+
+volumes:
+  db_data:
