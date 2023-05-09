@@ -142,6 +142,7 @@ function pumpkin_cafe_scripts() {
 	wp_style_add_data( 'pumpkin_cafe-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'pumpkin_cafe-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'pumpkin_cafe-main', get_template_directory_uri() . '/js/main.js', array('pumpkin_cafe-navigation'), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -150,9 +151,27 @@ function pumpkin_cafe_scripts() {
 add_action( 'wp_enqueue_scripts', 'pumpkin_cafe_scripts' );
 
 /**
+ * Enqueue jQuery
+ */
+function use_wp_jquery() {
+	wp_deregister_script('jquery');
+	wp_enqueue_script('jquery', includes_url('/js/jquery/jquery.min.js'), array(), '3.6.0', false);
+}
+add_action('wp_enqueue_scripts', 'use_wp_jquery');
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
+
+/**
+ * Enqueue jQuery
+ */
+function add_jquery_map() {
+
+}
+add_action( 'wp_enqueue_scripts', 'add_jquery_map' );
+
 
 /**
  * Custom template tags for this theme.
