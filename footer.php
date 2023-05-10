@@ -11,19 +11,24 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
+	<footer id="colophon" class="site-footer footer-container">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'pumpkin_cafe' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'pumpkin_cafe' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'pumpkin_cafe' ), 'pumpkin_cafe', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
+			<div class="footer-company">
+				<h3><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">PumpkinCafe</a></h3>
+				<h4><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">パンプキンカフェ株式会社</a></h4>
+			</div>
+			<p>
+				〒123-4567　東京都千代田区丸の内1-1-1<br>
+				TEL:03-1234-5678 FAX:03-9876-5432<br>
+				10:00~20:00(定休日：水曜日)
+			</p>
+			<div class="footer-sns">
+				<a class="footer-sns__a" href="https://twitter.com/home" rel="sns"><i class="fa-brands fa-twitter"></i></a>
+				<a class="footer-sns__a" href="https://www.facebook.com/" rel="sns"><i class="fa-brands fa-facebook"></i></a>
+				<a class="footer-sns__a" href="https://www.instagram.com/" rel="sns"><i class="fa-brands fa-square-instagram"></i></a>
+				<a class="footer-sns__a" href="https://www.youtube.com/" rel="sns"><i class="fa-brands fa-youtube"></i></a>
+			</div>
+			<p class="copyright">Copyright ©PumpkinCafe</p>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
