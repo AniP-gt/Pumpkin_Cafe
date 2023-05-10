@@ -404,7 +404,7 @@ h6 {
 }
 
 p {
-  margin-bottom: 1.5em;
+  margin-bottom: 0;
 }
 
 dfn,
@@ -1025,4 +1025,53 @@ textarea {
 #primary-menu li a {
   margin: 20px 40px 0;
   color: white;
+}
+
+.footer-container {
+  background-color: rgb(243, 243, 226);
+}
+
+.site-info {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.site-info p {
+  text-align: center;
+}
+
+.footer-company {
+  display: flex;
+  justify-content: center;
+}
+.footer-company h3 {
+  margin: 0;
+  margin-right: 30px;
+  font-size: 30px;
+}
+.footer-company h4 {
+  margin: 0;
+  padding-top: 10px;
+}
+.footer-company h4:hover {
+  opacity: 0.6;
+}
+.footer-company a {
+  color: black;
+  text-decoration: none;
+}
+
+.footer-sns {
+  display: flex;
+  justify-content: space-around;
+  width: 200px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+.footer-sns a {
+  color: black;
+  text-decoration: none;
+}
+
+.copyright {
+  font-size: 12px;
 }/*# sourceMappingURL=style.css.map */

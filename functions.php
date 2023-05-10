@@ -138,7 +138,8 @@ add_action( 'widgets_init', 'pumpkin_cafe_widgets_init' );
  * Enqueue scripts and styles.
  */
 function pumpkin_cafe_scripts() {
-	wp_enqueue_style( 'pumpkin_cafe-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_enqueue_style( 'reset-style', get_template_directory_uri() . './reset.css', array(), _S_VERSION );
+	wp_enqueue_style( 'pumpkin_cafe-style', get_stylesheet_uri(), array('reset-style'), _S_VERSION );
 	wp_style_add_data( 'pumpkin_cafe-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'pumpkin_cafe-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
