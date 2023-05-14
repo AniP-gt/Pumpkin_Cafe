@@ -1,0 +1,201 @@
+.front-movie {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+// スライダー
+.pumpkin-info {
+  background-color: rgb(215, 215, 200);
+  &__container {
+    display: flex;
+    padding: 50px 50px;
+    &-img {
+      width: 500px;
+      height: 500px;
+    }
+    &-text {
+      margin-left: 20px;
+    }
+  }
+}
+
+/*-----------------------
+INFORMATION
+------------------------*/
+.pumpkin-information {
+  &__h2 {
+    text-align: center;
+  }
+}
+
+// お知らせ
+.info-news {
+  &__ul {
+    &__li {
+      border-bottom: 1px solid black;
+      width: 1200px;
+      list-style: none;
+      &__date {
+        margin-top: 15px;
+      }
+      &__a {
+        display: flex;
+        color: black;
+        text-decoration: none;
+        padding: 20px 20px;
+        &-content {
+          margin: 0 20px;
+        }
+      }
+    }
+  }
+}
+
+
+/*--------------------------------------
+  tab
+--------------------------------------*/
+.tab-wrap{
+  margin-bottom: 40px;
+}
+.tab-group{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+.tab{
+  flex-grow: 1;
+  background: #58A9EF; /* タブのカラー */
+  border-radius: 10px 10px 0 0;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 0 5px;
+  padding: 14px 0 12px;
+  text-align: center;
+  transition: 1s;
+  vertical-align: bottom;
+}
+.panel-group{
+  min-height:100px;
+  border:solid 1px #CCC;
+  border-top: 8px solid #C8E4FF;
+  padding: 10px;
+}
+// スクロール枠
+.panel{
+  display:none;
+  width: 100%;
+  height: 600px;
+  overflow-y: scroll;
+  background-color: #f7f7ef;
+}
+.tab.is-active{
+  color:#FFF;
+  transition: 1s;
+  opacity: 0.6;
+  padding-bottom: 20px;
+}
+.panel.is-show{
+  display:block;
+}
+
+@media screen and (max-width:480px) {
+  .tab{
+    padding: 10px 0 7px;
+  }
+  .tab.is-active{
+    padding-bottom: 15px;
+  }
+}
+
+// informationの中のコンテンツボックス
+.info-wrapper {
+  display: grid;
+  width: 1600px;
+  grid-template-columns: auto auto auto auto;
+  margin: 0 auto;
+}
+
+.box{
+  border:1px solid #EEE;
+  box-shadow:rgba(122, 122, 122, 0.0588235) 0px 0px 6px 3px;
+  -webkit-box-shadow:rgba(122, 122, 122, 0.0588235) 0px 0px 6px 3px;
+  -moz-box-shadow:rgba(122, 122, 122, 0.0588235) 0px 0px 6px 3px;
+  width: 385px;
+  height: 444px;
+  margin-bottom: 26px;
+  a {
+    &:hover{
+      opacity: 0.7;
+      transition: all 0.2s;
+    }
+  }
+  img {
+    width: 385px;
+    height: 257px;
+  }
+  &__inner{
+    margin: 27px 31px;
+    &-category {
+      font-size: 12px;
+    }
+    &-text {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+    &-age {
+      margin-top: 33px;
+      font-size: 12px;
+      text-align: right;
+    }
+  }
+}
+
+// 各一覧ボタン
+a.info_index_btn {
+	display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+	text-align: center;
+	text-decoration: none;
+	width: 200px;
+	margin: auto;
+  margin-bottom: 10px;
+	padding: 1rem 2rem 1rem 2rem;
+	font-weight: bold;
+	background: #27acd9;
+	color: #fff;
+	border-radius: 100vh;
+	position: relative;
+	transition: 0.5s;
+}
+a.info_index_btn::before {
+	content: '';
+	width: 7px;
+	height: 7px;
+	border-top: 2px solid #fff;
+	border-right: 2px solid #fff;
+	transform: rotate(45deg);
+}
+a.info_index_btn:hover {
+	background: #44c6f2;
+	color: #fff;
+}
+
+
+// 人気記事投稿
+.popular-container {
+  display: flex;
+  justify-content: space-around;
+  &__wrapper {
+    h2 {
+      text-align: center;
+    }
+  }
+}
+
+

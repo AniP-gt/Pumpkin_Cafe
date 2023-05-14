@@ -10,8 +10,7 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
-
+	<main id="primary" class="site-main"> 
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
@@ -43,7 +42,11 @@ get_header();
 
 		endif;
 		?>
-
+    <div class="pagenation">
+      <?php if(function_exists('wp_pagenavi')): ?>
+        <?php wp_pagenavi(); ?>
+      <?php endif;?>
+    </div>
 	</main><!-- #main -->
 
 <?php
