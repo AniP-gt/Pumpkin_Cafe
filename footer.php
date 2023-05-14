@@ -22,6 +22,7 @@
 				TEL:03-1234-5678 FAX:03-9876-5432<br>
 				10:00~20:00(定休日：水曜日)
 			</p>
+			<p class="footer-contact"><a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" rel="home">お問い合わせはこちら</a></p>
 			<div class="footer-sns">
 				<a class="footer-sns__a" href="https://twitter.com/home" rel="sns"><i class="fa-brands fa-twitter"></i></a>
 				<a class="footer-sns__a" href="https://www.facebook.com/" rel="sns"><i class="fa-brands fa-facebook"></i></a>
