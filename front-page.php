@@ -5,7 +5,10 @@
   <video class="front-movie" src="http://localhost:8000/wp-content/uploads/2023/05/pexels-polina-kovaleva-5644957-1920x1080-25fps.mp4" autoplay loop muted></video>
 
   <!-- スライダー -->
-  <?php echo do_shortcode('[smartslider3 slider="2"]'); ?>
+  <section class="front-topics">
+  <h2>NewTopics</h2>
+  <div class="front-slider"><?php echo do_shortcode('[smartslider3 slider="5"]'); ?></div>
+  </section>
 
   <section class="pumpkin-info">
     <div class="pumpkin-info__container">

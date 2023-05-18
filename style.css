@@ -1089,6 +1089,22 @@ textarea {
   margin-bottom: 0;
 }
 
+.front-topics {
+  background-color: #fafff6;
+}
+.front-topics h2 {
+  text-align: center;
+  margin: 0;
+  font-size: 30px;
+}
+
+.front-slider {
+  width: 1000px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .pumpkin-info {
   background-color: rgb(215, 215, 200);
 }
@@ -1109,6 +1125,7 @@ INFORMATION
 ------------------------*/
 .pumpkin-information__h2 {
   text-align: center;
+  font-size: 30px;
 }
 
 .info-news__ul__li {
@@ -1271,6 +1288,38 @@ a.info_index_btn:hover {
 }
 .popular-container__wrapper h2 {
   text-align: center;
+}
+
+.page-header {
+  margin-top: 60px;
+}
+
+.page-title {
+  border-bottom: 2px solid black;
+  padding: 10px;
+  margin: 10px;
+  width: 95%;
+}
+
+.content-container {
+  display: flex;
+}
+
+.content-news {
+  display: flex;
+  margin: 20px;
+}
+.content-news__article {
+  margin-left: 10px;
+}
+
+.entry-header {
+  border-left: 10px solid orange;
+  padding: 2px 8px;
+}
+
+.entry-content {
+  margin-left: 20px;
 }
 
 /* Responsive

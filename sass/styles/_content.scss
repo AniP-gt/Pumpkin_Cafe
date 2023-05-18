@@ -1,0 +1,27 @@
+.content-container {
+  display: flex;
+}
+
+.entry-wrapper{
+
+}
+
+.content-news {
+  display: flex;
+  margin: 20px;
+  &__thumb {
+
+  }
+  &__article {
+    margin-left: 10px;
+  }
+}
+
+.entry-header {
+  border-left: 10px solid orange;
+  padding: 2px 8px;
+}
+
+.entry-content {
+  margin-left: 20px;
+}

@@ -196,6 +196,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// blogのarchiveのURIの設定
 function post_has_archive($args, $post_type) {
 	if ('post' == $post_type) {
 		$args['rewrite'] = true;
@@ -205,3 +206,32 @@ function post_has_archive($args, $post_type) {
 	return $args;
 }
 add_filter('register_post_type_args', 'post_has_archive', 10, 2);
+
+// the_archive_descriptionを文字制限するカスタマイズ
+function custom_archive_description() {
+	$description = get_the_archive_description();
+	$trimmed_description = wp_trim_words( $description, 20, '...' ); // 20は制限したい文字数です。適宜変更してください。
+	echo '<div class="archive-description">' . $trimmed_description . '</div>';
+}
+
+/* the_archive_title 余計な文字を削除 */
+add_filter( 'get_the_archive_title', function ($title) {
+	if (is_category()) {
+			$title = single_cat_title('',false);
+	} elseif (is_tag()) {
+			$title = single_tag_title('',false);
+	} elseif (is_tax()) {
+			$title = single_term_title('',false);
+	} elseif (is_post_type_archive() ){
+		$title = post_type_archive_title('',false);
+	} elseif (is_date()) {
+			$title = get_the_time('Y年n月');
+	} elseif (is_search()) {
+			$title = '検索結果：'.esc_html( get_search_query(false) );
+	} elseif (is_404()) {
+			$title = '「404」ページが見つかりません';
+	} else {
+		// なにもしない
+	}
+		return $title;
+});

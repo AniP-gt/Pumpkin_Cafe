@@ -4,6 +4,22 @@
 }
 
 // スライダー
+.front-topics {
+  background-color: #fafff6;
+  h2 {
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+  }
+}
+.front-slider {
+  width: 1000px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+// パンプキンカフェの案内
 .pumpkin-info {
   background-color: rgb(215, 215, 200);
   &__container {
@@ -25,6 +41,7 @@ INFORMATION
 .pumpkin-information {
   &__h2 {
     text-align: center;
+    font-size: 30px;
   }
 }
 
